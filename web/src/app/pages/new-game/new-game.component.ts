@@ -113,10 +113,6 @@ export class NewGameComponent implements OnInit, OnDestroy {
     }
   }
 
-  btnNewGame(){
-    this.router.navigate(['new']);
-  }
-
   displayFn(value: User[] | string): string {
     let displayValue: string = "";
     if (Array.isArray(value)) {
@@ -152,6 +148,15 @@ export class NewGameComponent implements OnInit, OnDestroy {
     }
     this._userInput.nativeElement.focus();
   }
+
+  onSubmit(){
+
+    this.crearJuego();
+
+    this.router.navigate(['list']);
+
+  }
+
 
 }
 

@@ -63,7 +63,7 @@ class FinalizarRondaUseCaseTest {
         event.setAggregateRootId("XXXX");
 
         var event2 = new JugadorAgregado(
-                JugadorId.of("AAAA"), "JOAQUIN",
+                JugadorId.of("AAAA"), "Pablo",
                 new Mazo(Set.of(
                         new Carta(CartaMaestraId.of("CARTAÑERY"), 1000, true, true),
                         new Carta(CartaMaestraId.of("bbb"), 102, true, true),

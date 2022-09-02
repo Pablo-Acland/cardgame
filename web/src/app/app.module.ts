@@ -17,7 +17,7 @@ import {ApiService} from './shared/services/api.service';
 import { ListGameComponent } from './pages/list-game/list-game.component';
 import { BoardComponent } from './pages/board/board.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginModule } from './login/login.module';
 import { HeaderComponent } from './componets/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -38,7 +38,6 @@ import { MatToolbarModule } from '@angular/material/Toolbar';
     ListGameComponent,
     BoardComponent,
     HomeComponent,
-    LoginComponent,
     HeaderComponent
   ],
   imports: [
@@ -61,7 +60,8 @@ import { MatToolbarModule } from '@angular/material/Toolbar';
     MatCheckboxModule,
     MatInputModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    LoginModule
 
   ],
   providers: [ApiService],
