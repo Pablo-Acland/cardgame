@@ -1,0 +1,26 @@
+@mixin box-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+   
+  }
+  .cont{
+    @include box-center()
+  }
+
+ .cont p {
+  font-size: 30px;
+ }
+.colorletra{
+  color:#080808;
+}
+
+ .colorFondo{
+  
+  background-color: #5b5b59;
+ }
