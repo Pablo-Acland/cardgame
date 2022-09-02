@@ -30,6 +30,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/Toolbar';
+import { MatSidenavModule } from '@angular/material/Sidenav';
+import { MatIconModule } from '@angular/material/Icon';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { MatToolbarModule } from '@angular/material/Toolbar';
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    LoginModule
+    MatSidenavModule,
+    LoginModule,
+    MatIconModule,
 
   ],
   providers: [ApiService],

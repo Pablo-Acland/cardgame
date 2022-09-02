@@ -47,3 +47,16 @@ button{
     margin: auto;
     margin-bottom: 30px;
 }
+.bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.heder {
+    width: 25%;
+}
+
+.principal {
+    width: 75%;
+}

@@ -48,7 +48,7 @@ class CrearJuegoUseCaseTest {
                 .expectNextMatches(domainEvent -> {
                     var event = (JugadorAgregado) domainEvent;
                     assert event.getMazo().value().cantidad().equals(6);
-                    return event.getJugadorId().value().equals("1211") && event.getAlias().equals("Gianni");
+                    return event.getJugadorId().value().equals("1211") && event.getAlias().equals("Pablo");
                 })
                 .expectNextMatches(domainEvent -> {
                     var event = (JugadorAgregado) domainEvent;
