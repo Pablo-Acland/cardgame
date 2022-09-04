@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="authBlock">
+<div class="contenedor">
+    <div class="authBlock">
     <div class="row">
      
 
@@ -7,9 +8,9 @@
             <div class="inner-adjust">
 
                 <div class="pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Crear Juego</h1>
+                    <h1 class="colorletra">Crear Juego</h1>
                 </div>
-                <p>Invite a los jugadores a participar del juego</p>
+                <p class="colorletra">Invite a los jugadores a participar del juego</p>
                 <mat-form-field class="example-full-width">
                     <input class="colorFondo" type="text" placeholder="Selecciones jugadores" aria-label="Selecciones jugadores" matInput
                         [matAutocomplete]="auto" [formControl]="userControl" #userInput>
@@ -29,7 +30,7 @@
 
                 <br><br>
 
-                <label>Jugadores Seleccionados:</label>
+                <label class="colorletra">Jugadores Seleccionados:</label>
                 <mat-list class="colorFondo" dense>
                     <mat-list-item *ngIf="selectedUsers?.length === 0">(None)</mat-list-item>
                     <mat-list-item  *ngFor="let user of selectedUsers">
@@ -37,9 +38,10 @@
                     </mat-list-item>
                 </mat-list>
 
-                <button mat-stroked-button color="primary" (click)="onSubmit()">Crear Juego</button>
+                <button mat-stroked-button class="boton" (click)="onSubmit()">Crear</button>
             </div>
         </main>
 
     </div>
+</div>
 </div>

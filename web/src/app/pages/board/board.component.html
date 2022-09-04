@@ -1,4 +1,4 @@
-<br />
+
 <div class="container-fluid">
     <div class="row">
 
@@ -14,13 +14,17 @@
             </div>
             <div class="inner-adjust">
                 <mat-grid-list cols="6" rowHeight="1:2">
-                    <mat-grid-tile *ngFor="let card of cartasDelTablero">
+                    <mat-grid-tile *ngFor="let card of cartasDelTablero; index as k">
                         <mat-card class="m-2">
                             <mat-card-title-group>
-                                <img mat-card-image src="/assets/{{card.cartaId}}" />
+                                <img mat-card-image *ngIf="tirador[k].uid !== uid" src="/assets/backcard.jpg" />
+                                <img mat-card-image *ngIf="tirador[k].uid === uid" src="/assets/{{ card.cartaId }}" />
                             </mat-card-title-group>
                             <mat-card-content>
-                                Poder 10px
+                                Alias: {{ tirador[k].alias }}
+                            </mat-card-content>
+                            <mat-card-content *ngIf="tirador[k].uid === uid">
+                                Pader: {{card.poder}}
                             </mat-card-content>
                         </mat-card>
                     </mat-grid-tile>
@@ -42,7 +46,7 @@
                         </mat-card-content>
 
                         <mat-card-actions>
-                            <button class="colorletra " mat-button (click)="poner(card.cartaId)" color="primary" disabled="{{!card.estaHabilitada}}">
+                            <button class="colorletra " mat-button (click)="poner(card.cartaId)" color="primary" disabled="{{!card.estaHabilitada || !roundStarted}}">
                                 MOVER A TABLERO
                             </button>
                         </mat-card-actions>

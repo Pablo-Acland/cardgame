@@ -150,11 +150,8 @@ export class NewGameComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(){
-
+    setTimeout(() => {this.router.navigate(['list'])}, 1000)
     this.crearJuego();
-
-    this.router.navigate(['list']);
-
   }
 
 

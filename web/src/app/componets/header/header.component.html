@@ -5,17 +5,5 @@
       </button>
       <h2>Marvel  <span>Card Game</span></h2>
       <span class="example-spacer"></span>
-      <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <span *ngIf="!auth.isLoggedIn; else viewLogout" routerLink="/login">Login</span>
-      </button>
-      <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
-        <span routerLink="/home">inicio</span>
-      </button>
-      <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
-        <span>{{auth.nameLogged}}</span>
-      </button>
     </mat-toolbar>
 </p>
-<ng-template #viewLogout>
-    <span (click)="auth.signOut()">Logout</span>
-</ng-template>
