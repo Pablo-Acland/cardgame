@@ -1,9 +1,9 @@
 <app-header></app-header>
 <div class="contenedor">
-    <div class="authBlock">
+    <div>
     <div class="row">
      
-
+        
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="inner-adjust">
 
@@ -12,9 +12,9 @@
                 </div>
                 <p class="colorletra">Invite a los jugadores a participar del juego</p>
                 <mat-form-field class="example-full-width">
-                    <input class="colorFondo" type="text" placeholder="Selecciones jugadores" aria-label="Selecciones jugadores" matInput
+                    <input  type="text" placeholder="Selecciones jugadores" aria-label="Selecciones jugadores" matInput
                         [matAutocomplete]="auto" [formControl]="userControl" #userInput>
-                    <mat-hint class="colorletra">Ingrese el nombre del jugador </mat-hint>
+                    
                 </mat-form-field>
 
                 <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
@@ -41,6 +41,9 @@
                 <button mat-stroked-button class="boton" (click)="onSubmit()">Crear</button>
             </div>
         </main>
+            <div>
+                <img mat-card-image  src="/assets/newgamelogo.jpg" />
+            </div>
 
     </div>
 </div>
